@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <title>Contato</title>
+    <link rel="stylesheet" href="contato.css">
+    <script src="menu.js"></script>
+    <script src="mensagem.js"></script>
+</head>
+<body>
+    
+    <h1>Contato</h1>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+    
+        <nav>
+            <ul id="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="sobre.html">Sobre Mim</a>
+                    <ul class="dropdown-menu centered">
+                        <li><a href="superacao.html">♡ Superação</a></li>
+                        <li><a href="croche.html">♡ Crochê</a></li>
+                    </ul>
+                </li>
+                <li><a href="retinose.html">Retinose</a></li>
+                <li class="dropdown">
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+            <div class="menu-icon" id="menu-icon">
+                <img src="img/menu.png" alt="Menu">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside class="sidebar-left">
+            <form id="messageForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="statusMessage" class="hidden">Mensagem enviada com sucesso!</div>
+        </aside>
+
+        <section class="icons-section">
+            <div class="icon">
+                <img src="img/insta.png" alt="Instagram">
+                <p>@sivieirad</p>
+            </div>
+            <div class="icon">
+                <img src="img/insta.png" alt="Instagram">
+                <p>@simone.vieira.croche</p>
+            </div>
+        </section>
+
+        <aside class="sidebar-right">
+            <div class="circle-image">
+                <img src="img/foto 7.jpg" alt="Foto de Perfil">
+            </div>
+        </aside>
+    </main>
+
+        <!-- MODAL -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage">Mensagem enviada com sucesso!</p>
+        </div>
+    </div>
+
+    <div class="voltar">
+        <a href="index.html">Voltar à Página Principal</a>
+    </div>
+
+    <footer class="footer footer-caixa"> 
+        <p>Copyright © 2024 - Desenvolvedor Fernanda Gomes.</p>  
+    </footer>
+
+
+</body>
+</html>

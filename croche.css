@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+}
+
+nav {
+    text-align: center;
+    padding: 8px;
+    position: fixed;
+    left: 0; 
+    width: 100%;
+    z-index: 1000;
+}
+
+header {
+    background-color: rgb(9, 235, 178);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: -10%;
+    padding: 1px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 70px;
+    margin-left: 20px;
+    mix-blend-mode: multiply;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative; 
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #686666;
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold; 
+}
+
+/* Ícone do menu */
+.menu-icon {
+    display: flex;
+    cursor: pointer;
+    width: 30px;
+    height: auto;
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.menu-icon img {
+    width: 100%;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #69f5bf;
+    padding: 10px;
+    top: calc(100% + 10px);
+    left: 0;
+    z-index: 1000;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.menu-icon.active + .main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.main-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    background-color: rgb(9, 235, 178);
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 90px;
+    font-size: 60px;
+    margin-bottom: -5px;
+    color: rgb(7, 134, 151);
+    font-family: Sacramento;
+}    
+
+h2 {
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: center;
+    color: #706e6e;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+    font-size: 15px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #637981;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-container {
+    margin: 0 auto; 
+    max-width: 1000px;
+    width: 90%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%; 
+}
+
+.grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.grid-item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(2, 2, 2, 0.5);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    transition: bottom 0.3s ease; 
+}
+
+.grid-item:hover p {
+    bottom: -50px; 
+}
+
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: rgb(35, 36, 35);
+    background-color: #69f5bf;
+    z-index: 100;
+}
+
+.voltar {
+    text-align: center;
+}
+
+.voltar a{
+    color: green;
+}
+
+/*RESPONSIVO*/
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        margin-top: -20px;
+    }
+
+    .main-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 35px;
+        background-color: #69f5bf;
+    }
+
+    .main-menu.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 0;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        border-bottom: 1px solid #fff;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}

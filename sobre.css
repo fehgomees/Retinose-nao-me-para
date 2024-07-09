@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(9, 235, 178);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 70px;
+    mix-blend-mode: multiply;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #686666;
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+/* ÍCONE MENU */
+.menu-icon {
+    display: fixed; 
+    cursor: pointer;
+    width: 30px;
+    height: auto;
+    position: fixed;
+    top: 45px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.menu-icon img {
+    width: 100%;
+    margin-top: -10px;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #69f5bf;
+    padding: 10px;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/*CENTRALIZANDO DROPDOWN*/
+.dropdown-menu.centered {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-link {
+    position: relative; 
+}
+
+.nav-link .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px; 
+    right: 0;
+    background-color: rgb(9, 235, 178);
+    width: 100%;
+}
+
+h1 {
+    font-size: 80px;
+    color: rgb(8, 134, 97);
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: -35px;
+    font-family: Sacramento;
+}
+h2 {
+    text-align: center;
+    margin-bottom: -30px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto; 
+    padding-top: 50px; 
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.row-2 {
+    text-align: center;
+}
+
+.img-page {
+    flex: 0 0 20%;
+    max-width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.img-page img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 30px; 
+    padding: 20px; 
+}
+
+.img-page2 {
+    flex: 0 0 20%;
+    max-width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    position: relative; 
+}
+
+.img-page2 img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.img-page2 img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.text {
+    flex: 1;
+    margin: 10px;
+    font-size: 25;
+}
+.center-text {
+    font-family: 'Sacramento', cursive; 
+    font-size: 28px;
+    text-align: center;
+    margin: 20px auto; 
+    color: rgb(6, 83, 57);
+    padding: 10px;
+    border: 2px solid #5a5858; 
+    border-radius: 15px; 
+    background: linear-gradient(145deg, #b3f0d6, #9cd0ba); 
+    width: 450px; 
+    height: 70px;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.center-text:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.voltar {
+    text-align: center;
+}
+
+.voltar a{
+    color: green;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: rgb(35, 36, 35);
+    background-color: #69f5bf;
+    z-index: 100;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 768px) {
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: auto;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .menu-icon img {
+        width: 100%;
+        margin-top: 8px;
+    }
+    
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    #main-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgb(9, 235, 178);
+    }
+
+    #main-menu.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 0;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        border-bottom: 1px solid #fff;
+    }
+
+    nav ul li a:hover {
+        color: #666;
+    }
+
+    .logo {
+        margin-left: -95%;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-left: 0;
+    }
+
+    nav {
+        position: static;
+        margin-top: 0;
+    }
+
+      .dropdown-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgb(9, 235, 178); 
+    }    
+
+    .footer {
+        text-align: center;
+    }
+
+    .voltar {
+        text-align: center;
+        margin-left: -5px;
+    }
+
+    h1 {
+        font-size: 60px;
+        margin-top: 15%;
+    }
+
+    h2 {
+        margin-bottom: -20px;
+    }
+
+    .center-text {
+        font-size: 24px;
+        width: 100%;
+        max-width: 250px;
+        height: 60px;
+    }
+
+    .img-page,
+    .img-page2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 5px 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-top: 20%;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .secao-2 img {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .img-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .img-page2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    .voltar {
+        margin-left: 0;
+    }
+
+    .center-text {
+        font-size: 18px;
+        max-width: 100%;
+    }
+}
