@@ -10,32 +10,30 @@ body {
     box-sizing: border-box;
 }
 
-nav {
-    text-align: center;
-    padding: 8px;
-    position: fixed;
-    left: 0; 
-    width: 100%;
-    z-index: 1000;
-}
-
 header {
     background-color: rgb(9, 235, 178);
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: -10%;
-    padding: 1px;
+    padding: 10px 20px;
     color: #fff;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo img {
     height: 70px;
-    margin-left: 20px;
     mix-blend-mode: multiply;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
 }
 
 nav ul {
@@ -48,7 +46,7 @@ nav ul {
 
 nav ul li {
     margin-right: 20px;
-    position: relative; 
+    position: relative;
 }
 
 nav ul li:last-child {
@@ -66,50 +64,77 @@ nav ul li a:hover {
     color: #686666;
     transform: translateY(-5px);
     transition: all 0.2s;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-/* Ícone do menu */
+/* ÍCONE MENU */
 .menu-icon {
-    display: flex;
+    display: fixed; 
     cursor: pointer;
     width: 30px;
     height: auto;
     position: fixed;
-    top: 40px;
+    top: 45px;
     right: 20px;
     z-index: 1001;
 }
 
 .menu-icon img {
     width: 100%;
+    margin-top: -11px;
 }
 
-/* Dropdown menu */
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
     background-color: #69f5bf;
     padding: 10px;
     top: calc(100% + 10px);
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-.menu-icon.active + .main-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/*CENTRALIZANDO DROPDOWN*/
+.dropdown-menu.centered {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-link {
+    position: relative; 
+}
+
+.nav-link .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .main-menu {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px; 
+    right: 0;
+    background-color: rgb(9, 235, 178);
+    width: 100%;
 }
 
 .main-menu.active {
@@ -124,7 +149,7 @@ nav ul li a:hover {
 
 h1 {
     text-align: center;
-    margin-top: 90px;
+    margin-top: 120px;
     font-size: 60px;
     margin-bottom: -5px;
     color: rgb(7, 134, 151);
@@ -219,20 +244,36 @@ h3 {
 
 /*RESPONSIVO*/
 @media screen and (max-width: 768px) {
-    .menu-icon {
+    #menu-icon {
         display: block;
-        margin-top: -20px;
+        cursor: pointer;
+        width: 30px;
+        height: auto;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 1001;
     }
 
-    .main-menu {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    #main-menu {
         display: none;
         flex-direction: column;
         width: 100%;
-        margin-bottom: 35px;
-        background-color: #69f5bf;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgb(9, 235, 178);
     }
 
-    .main-menu.show {
+    #main-menu.show {
         display: flex;
     }
 
@@ -245,11 +286,52 @@ h3 {
         border-bottom: 1px solid #fff;
     }
 
-    .dropdown-menu {
-        position: relative;
-        top: 0;
-        left: 0;
-        padding: 10px;
-        width: 100%;
+    nav ul li a:hover {
+        color: #666;
     }
-}
+
+    h1 {
+        font-size: 50px;
+        margin-left: 20px;
+        margin-top: 30%;
+    }
+
+    .sidebar-left, .sidebar-right {
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-left: -95%;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-left: 0;
+    }
+
+    nav {
+        position: static;
+        margin-top: 0;
+    }
+
+      .dropdown-menu {
+        top: 100%; 
+    }    
+
+    .footer {
+        text-align: center;
+    }
+
+    .voltar {
+        text-align: center;
+        margin-left: -5px;
+    }
+}    
