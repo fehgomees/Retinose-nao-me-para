@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         messageForm.addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // Simular envio da mensagem
+            // Simular envio da mensagem 
             setTimeout(function() {
                 const modal = document.getElementById('myModal');
                 if (modal) {
